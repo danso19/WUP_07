@@ -46,23 +46,35 @@ dd2 <- kRdata %>% group_by(sex,result) %>% summarize(count=n()) %>% mutate(prcnt
 
 # the group_by followed by summarize(count=n())
 
-basicC <- ggplot(dd2,aes(x=sex,y=count,fill=result))
+basicC <- ggplot(dd2,aes(x=result,y=count,fill=sex))
 basicC + geom_bar(stat="identity",position="dodge")
 
 #Now for percentage plot
 
-basicCC <- ggplot(dd2,aes(x=sex,y=prcnt*100,fill=result)) 
+basicCC <- ggplot(dd2,aes(x=result,y=prcnt*100,fill=sex)) 
 basicCC + geom_bar(stat="identity", position = "dodge")
 ```
 
   
+```{r}
+barchartGC(~result + sex,data=kRdata)
+barchartGC(~result + sex,data=kRdata, type="percent")
 
+```
 
-
+From the indications of the barchart we can see that more male deaths are related to covid then female deaths, as it appears that they would make up to sixty percent of total deaths while females make up around forty percent.
 
 
   
 ## Numerical results
+
+```{r}
+table1 <- xtabs(~result + sex, data=kRdata)
+rowPerc(table1)
+colPerc(table1)
+```
+
+The numerical results yield that males are almost twice as likely to die from covid scince out of the one-hundred males, sixty four of them died, compared to the thirty-six out of the total one-hundred females.
 
 
 ## Inferential results 
