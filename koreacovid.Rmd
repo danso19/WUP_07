@@ -79,8 +79,13 @@ The numerical results yield that males are almost twice as likely to die from co
 
 ## Inferential results 
 
+```{r}
+chisq.test(table1)
+chisqtestGC(table1)
+fisher.test(table1)
+```
 
-
+From the Fisher's exact tests, from the data we can see that males are 2.3 times more likely to die from covid in comparison to females. The p-value is also very small which allows us to reject the null hypothesis.
 
 ## Conclusions
 
