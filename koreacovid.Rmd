@@ -88,4 +88,4 @@ fisher.test(table1)
 From the Fisher's exact tests, from the data we can see that males are 2.3 times more likely to die from covid in comparison to females. The p-value is also very small which allows us to reject the null hypothesis.
 
 ## Conclusions
-
+We can reject the null hypothesis and from the results we were able to gather that men are more suseptive to die from covid as the death rate was 64% comparable to that of woman who only yield a death rate of 36% , which for the male population death is almost as twice as likely to occur.
